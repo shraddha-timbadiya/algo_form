@@ -1,0 +1,165 @@
+<html>
+  <head>
+  <title>student form</title>
+  </head>
+  <style>
+	.space{
+		width:300px;
+	}
+	form{
+		display: flex;
+		align-items: center;
+	}
+	td{
+		padding-bottom:10px;
+	}
+	table{
+		width: 500px;
+	}
+	#box{
+		width:400px;
+		height:30px;
+	}
+	.heading{
+		font-size: large;
+		font-weight: bold;
+	}
+	button{
+		text-decoration: none;
+  background-color: rgb(98 84 243);
+  color: rgb(255 255 255);
+  padding: 0.4rem 1.4rem;
+  align-items: center;
+  border: none;
+  text-transform: uppercase;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+	}
+	input:required:invalid,
+  input:focus:invalid {
+    /* insert your own styles for invalid form input */
+    -moz-box-shadow: none;
+  }
+  </style>
+  <body>
+	<script>
+		
+        function showAlert() {
+
+			var name= document.getElementById("name").value;
+			var address= document.getElementById("address").value;
+			var number= document.getElementById("number").value;
+    		var email= document.getElementById("email").value;
+			var years= document.getElementById("years").value;
+			var education= document.getElementById("education").value;
+			var aadhar= document.getElementById("aadhar").value;
+			var pan= document.getElementById("pan").value;
+			var cname= document.getElementById("cname").value;
+			var designation= document.getElementById("designation").value;
+			var hmyears= document.getElementById("hmyears").value;
+			var jdes= document.getElementById("jdes").value;
+			var full_part= document.getElementById("full_part").value;
+			
+			let url = "https://wa.me/8140588852?text="
+				+"*Name: *"+name+"%0a"
+				+"*Address: *"+address+"%0a"
+				+"*Number: *"+number+"%0a"
+				+"*E-mail: *"+email+"%0a"
+				+"*Years: *"+years+"%0a"
+				+"*Education: *"+education+"%0a"
+				+"*Aadhar No: *"+aadhar+"%0a"
+				+"*Pan No: *"+pan+"%0a"
+				+"*Company Name: *"+cname+"%0a"
+				+"*Designation: *"+designation+"%0a"
+				+"*Experience: *"+hmyears+"%0a"
+				+"*Job Designation: *"+jdes+"%0a"
+				+"*Job_Time: *"+full_part+"%0a"
+
+			window.open(url,'_blank').focus();
+					
+	}
+    </script>
+
+
+    <form onsubmit="showAlert()">
+	<table align="center">
+	  <tr><td>નામ(Name):</td>
+          <td><input type="text" id="name" name="name" id="box" class="space" required/>
+			<span id="nameloc"></span></td>
+	  </tr>
+	  <tr><td>
+		સરનામું(Address):</td>
+		<td><textarea type="text" id="address" name="A1" rows="7" class="space" id="box" col="40" required></textarea>
+			<span id="addloc"></span></td>
+		</tr>					
+	<tr><td>મોબાઇલ નં.(Mobile No):</td>
+	<td><input type="text" id="number" name="p1" id="box" class="space" min="10" max="10" required>
+		<span id="phoneloc"></span></td>
+	</tr>
+	<tr><td>ઈ-મેલ(E-mail):</td>
+	<td><input type="email" id="email" name="e1" id="box" class="space" required>
+		<span id="emailloc"></span></td>
+	</tr>
+	<tr><td>ઉમર(Years):</td>
+		<td><input type="text" id="years" name="y1" id="box" class="space" max="2" min="1"required>
+			<span id="yearloc"></span></td>
+	</tr>
+    <tr><td>શિક્ષણ(Education):</td>
+		<td><input type="education" id="education" name="ed2" class="space" id="box" required>
+			<span id="eduloc"></span></td></tr>
+		<tr><td>આધાર કાર્ડ નં(Aadhar Card No):</td>
+			<td><input type="text" id="aadhar" name="a1" class="space" id="box" required>
+				<span id="aadharloc"></span></td>
+			</tr>
+			<tr><td>પાન કાર્ડ નં(Pan Card No):</td>
+				<td><input type="text" id="pan" name="p1" class="space" id="box" required>
+					<span id="panloc"></span></td>
+				</tr>
+
+
+
+				<tr></tr>
+				<tr></tr>
+				<tr></tr>
+				<tr class="heading">
+					<td colspan="2">
+						હાલ વ્યવસાય/નોકરીની વિગતો (Present Business/Job Details)
+				</td>
+				</tr>
+	
+				<tr><td>કંપની નું નામ(Company Name):</td>
+					<td><input type="text" id="cname" name="name" class="space" id="box" required/>
+						<span id="companyloc"></span></td>
+				</tr>
+				<tr><td>હોદ્દો(Designation):</td>
+					<td><input type="text" id="designation" class="space" name="name" id="box" required/>
+						<span id="desloc"></span></td>
+				</tr>
+				<tr><td>
+					કેટલા વર્ષ(How Many Years):</td>
+					<td><input type="text" id="hmyears" name="p1" class="space" id="box"  required>
+						<span id="exeloc"></span></td>
+					</tr>
+					<tr><td>જોબ હોદ્દો(Job Designation):</td>
+						<td><input type="text" id="jdes" name="name" class="space" id="box" required/>
+							<span id="jdloc"></span></td>
+					</tr>
+	 <tr><td>નોકરીનો સમય(Full/Part Time):</td>
+	 <td>
+	<input type="text" id="full_part" name="d1" class="space" required>
+		<span id="timeloc"></span>
+	</td>
+	</tr>
+	
+	
+	<tr><td>
+		<button type="submit" >submit</button></td>
+	</tr>
+	</table>
+	</form>
+  </body>
+</html>
